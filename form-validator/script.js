@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const password2 = document.getElementById('password2');
   const submit = document.getElementById('submit');
 
-  const showError = (input, message) => {
+  showError = (input, message) => {
     const formControl = input.parentElement;
     formControl.className = 'form-control error';
     const small = formControl.querySelector('small');
@@ -13,19 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
     small.classList.add('on');
   };
 
-  const showSuccess = (input) => {
+  showSuccess = (input) => {
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
     const small = formControl.querySelector('small');
     small.classList.remove('on');
   };
 
-  const regularEx = (email) => {
+  regularEx = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   }
 
-  function validations() {
+  validations = () => {
     username.value === '' ? showError(username, '세 글자 이상 입력하세요.') : showSuccess(username);
     email.value === '' || !regularEx(email.value) ? showError(email, `'@'를 포함하여 입력하세요.`) : showSuccess(email);
     password.value === '' || password.value.length < 6 ? showError(password, '최소 6자이상 입력하세요.') : showSuccess(password);

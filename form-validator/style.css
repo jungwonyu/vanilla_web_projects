@@ -24,6 +24,7 @@ body {
     text-align: center;
 }
 
+/* form */
 form {
     display: flex;
     flex-direction: column;
@@ -53,6 +54,7 @@ form {
     padding: 10px;
 }
 
+/* message */
 small {
     visibility: hidden;
 }
@@ -63,6 +65,7 @@ small.on {
     text-align: left;
 }
 
+/* button */
 button {
     width: 100%;
     padding: 10px;
