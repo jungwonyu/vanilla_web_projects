@@ -104,11 +104,11 @@ body {
     scale: 1.3;
 }
 
-.row>.seat:nth-child(2) {
+.row >.seat:nth-child(2) {
     margin-right: 10px;
 }
 
-.row>.seat:nth-child(6) {
+.row >.seat:nth-child(6) {
     margin-right: 10px;
 }
 

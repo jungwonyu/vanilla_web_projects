@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetBtn = get('.resetBtn');
   let seatArr = [];
 
+  /* functions */
   init = () => {
     for (let i = 0; i < optionList.options.length; i++) {
       if (Number(optionList.options[i].value) === Number(localStorage.getItem('price'))) {
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  /* implement */
   optionList.addEventListener('change', () => change());
   seatList.forEach((seat, idx) => selectedSeat(seat, idx));
   localStorage.getItem('seatIdx') && init();
