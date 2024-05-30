@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   const get = (target, parent = document) => parent.querySelector(target);
-
   const video = document.getElementById('video');
   const container = get('.container');
   const playBtn = get('.play');
@@ -13,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
   playBtn.addEventListener('click', () => play());
   pauseBtn.addEventListener('click', () => pause());
   stopBtn.addEventListener('click', () => stop());
-  dot.addEventListener('mousedown', (e) => progress(e));
+  video.addEventListener('timeupdate', () => timeUpdate());
+  dot.addEventListener('mousedown', () => progress());
 
   play = () => {
     video.play();
-    timeUpdate();
     container.classList.add('isPlaying');
   };
 
@@ -35,22 +34,20 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   timeUpdate = () => {
-    const timer = setInterval(() => {
-      const minutes = Math.floor(video.currentTime / 60);
-      let seconds = Math.floor(video.currentTime % 60);
+    const minutes = Math.floor(video.currentTime / 60);
+    let seconds = Math.floor(video.currentTime % 60);
 
-      seconds < 10 && (seconds = '0' + seconds);
-      timeStamp.innerText = `${minutes}:${seconds}`;
-      dot.style.left = `${(video.currentTime / video.duration) * 100}%`;
+    seconds < 10 && (seconds = '0' + seconds);
+    timeStamp.innerText = `${minutes}:${seconds}`;
+    dot.style.left = `${(video.currentTime / video.duration) * 100}%`;
 
-      if (video.ended) {
-        clearInterval(timer);
-        container.classList.remove('isPlaying');
-      }
-    }, 100);
+    if (video.ended) {
+      clearInterval(timer);
+      container.classList.remove('isPlaying');
+    }
   };
 
-  progress = (e) => {
+  progress = () => {
     const rect = progressbar.getBoundingClientRect();
     const max = progressbar.offsetWidth;
 
