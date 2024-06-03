@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">My Landing Page</div>
+            <div class="desc">This is a simple landing page with a menu slider.</div>
+            <button class="popOpenBtn">sign Up</button>
+            <button class="menuBtn"><img src="./assets/menu.png" /></button>
+        </div>
+        <div class="contents">
+            <div class="row">
+                <h1>What is this landing page about?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure accusamus ab consectetur eos
+                    provident ipsa est perferendis architecto. Provident, quaerat asperiores. Quo esse minus repellat
+                    sapiente, impedit obcaecati necessitatibus.
+
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente optio officia ipsa. Cum
+                    dignissimos possimus et non provident facilis saepe!</p>
+            </div>
+
+            <div class="row">
+                <h1>Tell Me More</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat eaque delectus explicabo qui
+                    reprehenderit? Aspernatur ad similique minima accusamus maiores accusantium libero autem iusto
+                    reiciendis ullam impedit esse quibusdam, deleniti laudantium rerum beatae, deserunt nemo neque,
+                    obcaecati exercitationem sit. Earum.</p>
+            </div>
+
+            <div class="row">
+                <h1>Benefits</h1>
+                <ul>
+                    <li>Easy to use</li>
+                    <li>Simple design</li>
+                    <li>Mobile responsive</li>
+                    <li>Fast loading</li>
+                </ul>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="popContainer">
+        <div class="title">
+            <p>Sign Up</p>
+            <button class="closeBtn">X</button>
+        </div>
+        <div class="formBox">
+            <p>Register with us to get offers, support and more</p>
+            <div class="form-control">
+                <label for="name">Username</label>
+                <input type="text" id="name" name="name" placeholder="Enter username" required>
+                <small></small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+                <small></small>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <small></small>
+            </div>
+
+            <div class="form-control">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" name="password" placeholder="Enter password again" required>
+                <small></small>
+            </div>
+
+            <button type="submit" id="submit">submit</button>
+        </div>
+    </div>
+
+    <div class="menuContainer">
+        <button class="closeBtn">X</button>
+        <div class="profile">
+            <img src="./assets/profile.jpg" />
+        </div>
+        <ul class="menu">
+            <li>Home</li>
+            <li>Portfolio</li>
+            <li>Blog</li>
+            <li>Contact Me</li>
+        </ul>
+    </div>
+</body>
+
+</html>
